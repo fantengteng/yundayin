@@ -1,0 +1,15 @@
+
+platform :ios, '9.0'
+
+target '磁力云打印' do
+    pod 'MBProgressHUD',:inhibit_warnings => true
+    pod 'MJRefresh',:inhibit_warnings => true
+    pod 'SDWebImage',:inhibit_warnings => true
+    pod 'AFNetworking',:inhibit_warnings => true
+    pod 'FMDB',:inhibit_warnings => true
+    pod 'MJExtension',:inhibit_warnings => true
+    pod 'SDAutoLayout',:inhibit_warnings => true
+    pod 'YYKit',:inhibit_warnings => true
+    pod 'SAMKeychain',:inhibit_warnings => true
+    pod 'TZImagePickerController'
+end

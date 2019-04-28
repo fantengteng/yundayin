@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="QiehuanC">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="365" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="xunleilogo" translatesAutoresizingMaskIntoConstraints="NO" id="jo4-VV-tpT">
+                    <rect key="frame" x="87" y="46" width="190" height="60"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="bQx-RU-CTw"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="全资源无限制" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jBg-Is-ScE">
+                    <rect key="frame" x="0.0" y="114" width="365" height="42"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="42" id="eqS-wD-ft2"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uAC-QA-R4D">
+                    <rect key="frame" x="16" y="178" width="140" height="44"/>
+                    <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="140" id="6Ok-bT-wmR"/>
+                        <constraint firstAttribute="height" constant="44" id="E68-Eu-qTW"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <state key="normal" title="立即下载"/>
+                    <connections>
+                        <action selector="down:" destination="-1" eventType="touchUpInside" id="cKs-0l-UsP"/>
+                    </connections>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="zhanshi1" translatesAutoresizingMaskIntoConstraints="NO" id="ZPN-GO-foo">
+                    <rect key="frame" x="16" y="257" width="333" height="190"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="190" id="T7h-si-VQ6"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5nY-h5-Ff2">
+                    <rect key="frame" x="16" y="455" width="333" height="212"/>
+                    <string key="text">
+                            概述和说明
+【极速下载】全球4亿用户的下载工具,十年技术沉淀,支持下载多种格式的文件
+【边播边下】无需转码,无需等待,视频文件即下即播
+【悬浮窗播放】边聊天或者浏览网页,边看视频,轻松切换
+【网址收藏】收藏喜欢的视频网站,一键快速打开
+【美女直播】24小时美女直播,随时随地撩起来
+【温馨提示】提供永久更新维护,下载用户赠送BT种子搜索功能!(全网搜索各种资源)
+
+                        </string>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gtZ-TL-XgR">
+                    <rect key="frame" x="209" y="178" width="140" height="44"/>
+                    <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="140" id="5fp-pO-7dv"/>
+                        <constraint firstAttribute="height" constant="44" id="99Y-a5-WNv"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <state key="normal" title="安装使用流程"/>
+                    <connections>
+                        <action selector="anzhuangshuoming:" destination="-1" eventType="touchUpInside" id="iV1-92-2LV"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="jBg-Is-ScE" firstAttribute="trailing" secondItem="Q5M-cg-NOt" secondAttribute="trailing" id="1Od-ef-H4q"/>
+                <constraint firstItem="gtZ-TL-XgR" firstAttribute="top" secondItem="jBg-Is-ScE" secondAttribute="bottom" constant="22" id="5EW-oe-FP5"/>
+                <constraint firstItem="5nY-h5-Ff2" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="16" id="Gtg-Sc-4e6"/>
+                <constraint firstItem="uAC-QA-R4D" firstAttribute="top" secondItem="jBg-Is-ScE" secondAttribute="bottom" constant="22" id="K3Q-oN-KcF"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="gtZ-TL-XgR" secondAttribute="trailing" constant="16" id="O7j-eN-fIn"/>
+                <constraint firstItem="jBg-Is-ScE" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="OfV-dF-Wyh"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="5nY-h5-Ff2" secondAttribute="trailing" constant="16" id="PIe-ab-6la"/>
+                <constraint firstItem="5nY-h5-Ff2" firstAttribute="top" secondItem="ZPN-GO-foo" secondAttribute="bottom" constant="8" id="TYc-ie-rmG"/>
+                <constraint firstItem="jo4-VV-tpT" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="87" id="Wql-oN-sKo"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="jo4-VV-tpT" secondAttribute="trailing" constant="88" id="Xet-KJ-pCS"/>
+                <constraint firstItem="ZPN-GO-foo" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="16" id="Z3F-Ej-Vwc"/>
+                <constraint firstItem="jBg-Is-ScE" firstAttribute="top" secondItem="jo4-VV-tpT" secondAttribute="bottom" constant="8" id="Z5i-vW-V0z"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="ZPN-GO-foo" secondAttribute="trailing" constant="16" id="eyM-jg-BLF"/>
+                <constraint firstItem="ZPN-GO-foo" firstAttribute="top" secondItem="uAC-QA-R4D" secondAttribute="bottom" constant="35" id="g9M-w4-86C"/>
+                <constraint firstItem="5nY-h5-Ff2" firstAttribute="bottom" secondItem="Q5M-cg-NOt" secondAttribute="bottom" id="huc-kL-HeH"/>
+                <constraint firstItem="jo4-VV-tpT" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="26" id="n6C-we-RL8"/>
+                <constraint firstItem="uAC-QA-R4D" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="16" id="nkz-sR-qa0"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+            <point key="canvasLocation" x="132" y="152.47376311844079"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="xunleilogo" width="200" height="59"/>
+        <image name="zhanshi1" width="339" height="190.5"/>
+    </resources>
+</document>

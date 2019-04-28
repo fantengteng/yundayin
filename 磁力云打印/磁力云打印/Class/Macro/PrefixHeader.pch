@@ -1,0 +1,35 @@
+//
+//  PrefixHeader.pch
+//  捕鱼达人
+//
+//  Created by linlin dang on 2019/3/26.
+//  Copyright © 2019 FTT. All rights reserved.
+//
+
+#ifdef __OBJC__
+#define PrefixHeader_pch
+
+
+// --------------------------- 系统模块 --------------------------- //
+
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#import <CoreMotion/CoreMotion.h>
+
+
+// --------------------------- Header --------------------------- //
+
+
+#import "ThirdpartyHeader.h"
+#import "AuxiliaryHeader.h"
+#import "ColorHeader.h"
+#import "UrlHeader.h"
+
+
+// --------------------------- 配置文件 --------------------------- //
+
+#import "TT_GeneralProfile.h"
+
+
+
+#endif /* PrefixHeader_pch */

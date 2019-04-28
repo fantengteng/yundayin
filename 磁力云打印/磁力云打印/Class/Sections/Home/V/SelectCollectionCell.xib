@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="SelectCollectionCell">
+            <rect key="frame" x="0.0" y="0.0" width="275" height="275"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="275" height="275"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iSk-cA-QAU">
+                        <rect key="frame" x="10" y="10" width="255" height="255"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="73K-V4-D4s">
+                        <rect key="frame" x="107.5" y="209" width="60" height="26"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="26" id="Ds0-qa-nnX"/>
+                            <constraint firstAttribute="width" constant="60" id="ccP-Pp-PkX"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kyu-9I-g6u">
+                        <rect key="frame" x="167" y="209" width="24" height="26"/>
+                        <color key="backgroundColor" red="0.80000537633895874" green="0.79999023675918579" blue="0.80000060796737671" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="26" id="WbT-FG-edZ"/>
+                            <constraint firstAttribute="width" constant="24" id="YOu-nr-t2S"/>
+                        </constraints>
+                        <state key="normal" image="jia"/>
+                        <connections>
+                            <action selector="jia:" destination="gTV-IL-0wX" eventType="touchUpInside" id="bNP-jh-7qH"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FFh-gd-Sb1">
+                        <rect key="frame" x="84" y="209" width="24" height="26"/>
+                        <color key="backgroundColor" red="0.80000537633895874" green="0.79999023675918579" blue="0.80000060796737671" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="24" id="9IJ-Xs-TO3"/>
+                            <constraint firstAttribute="height" constant="26" id="jYC-ex-voc"/>
+                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="24" id="mgM-8t-krN"/>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="26" id="nzs-7X-ocx"/>
+                        </constraints>
+                        <state key="normal" image="jian"/>
+                        <connections>
+                            <action selector="jian:" destination="gTV-IL-0wX" eventType="touchUpInside" id="HQl-qH-gX3"/>
+                        </connections>
+                    </button>
+                </subviews>
+            </view>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="Kyu-9I-g6u" secondAttribute="bottom" constant="40" id="76G-sJ-fKo"/>
+                <constraint firstAttribute="bottom" secondItem="73K-V4-D4s" secondAttribute="bottom" constant="40" id="FDz-cn-hBm"/>
+                <constraint firstAttribute="bottom" secondItem="iSk-cA-QAU" secondAttribute="bottom" constant="10" id="H0J-gE-3xk"/>
+                <constraint firstItem="73K-V4-D4s" firstAttribute="centerX" secondItem="SEy-5g-ep8" secondAttribute="centerX" id="Jjo-UI-n5J"/>
+                <constraint firstItem="73K-V4-D4s" firstAttribute="leading" secondItem="FFh-gd-Sb1" secondAttribute="trailing" constant="-0.5" id="Jz1-qE-K7y"/>
+                <constraint firstItem="iSk-cA-QAU" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="10" id="KgT-zG-JmY"/>
+                <constraint firstItem="Kyu-9I-g6u" firstAttribute="leading" secondItem="73K-V4-D4s" secondAttribute="trailing" constant="-0.5" id="U8i-V8-HNz"/>
+                <constraint firstItem="iSk-cA-QAU" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="UQg-8c-iJY"/>
+                <constraint firstAttribute="trailing" secondItem="iSk-cA-QAU" secondAttribute="trailing" constant="10" id="j6H-l7-4Ia"/>
+                <constraint firstAttribute="bottom" secondItem="FFh-gd-Sb1" secondAttribute="bottom" constant="40" id="wW4-kg-SqR"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="SEy-5g-ep8"/>
+            <size key="customSize" width="412" height="64"/>
+            <connections>
+                <outlet property="IMG" destination="iSk-cA-QAU" id="VeR-YU-YFz"/>
+                <outlet property="jia_Btn" destination="Kyu-9I-g6u" id="mMs-nb-5RS"/>
+                <outlet property="jian_Btn" destination="FFh-gd-Sb1" id="j3C-KB-dAy"/>
+                <outlet property="num_lab" destination="73K-V4-D4s" id="dRY-gl-DOO"/>
+            </connections>
+            <point key="canvasLocation" x="429.60000000000002" y="147.97601199400302"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="jia" width="12.5" height="12.5"/>
+        <image name="jian" width="12.5" height="2"/>
+    </resources>
+</document>
