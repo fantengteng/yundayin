@@ -36,6 +36,8 @@
 
 #define frontApigetAboutUsMARK @"frontApi/getAboutUs"
 
+#define linkacbMAEK @"linkacb"
+
 
 #define USER_ID \
 NSString *usee_id;\

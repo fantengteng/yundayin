@@ -35,7 +35,19 @@
         [self ElasticGeneralmethod:Manager];
     }else if ([Manager.requestMark isEqualToString:frontApigetAboutUsMARK]) {
         [self frontApigetAboutModeltransformation:Manager];
+    }else if ([Manager.requestMark isEqualToString:linkacbMAEK]) {
+        
     }
+}
+
+- (void)linkacbModeltransformation:(FTT_APIBaseManager *)Manager  {
+    NSDictionary *dic = Manager.responseObject;
+    TT_Log(@"%@",dic[@"data"]);
+    SaveObject(dic, @"INFO")
+    if (self.New_Close) {
+        self.New_Close(Manager.responseObject, nil, YES, NO, Manager.requestMark);
+    }
+    
 }
 
 - (void)frontApigetAboutModeltransformation:(FTT_APIBaseManager *)Manager  {

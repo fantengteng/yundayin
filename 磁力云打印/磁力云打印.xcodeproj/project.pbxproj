@@ -16,6 +16,7 @@
 		2C0576B9226971C90004C28C /* QiehuanC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C0576B7226971C90004C28C /* QiehuanC.m */; };
 		2C0576BA226971C90004C28C /* QiehuanC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C0576B8226971C90004C28C /* QiehuanC.xib */; };
 		2C0576BD2269A1800004C28C /* ShuomingC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C0576BC2269A1800004C28C /* ShuomingC.m */; };
+		2C0CD4A32276D4C900885F9D /* DanduAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C0CD4A22276D4C900885F9D /* DanduAPI.m */; };
 		2C0F89EC22680E9100E05654 /* HomeSelectIMGC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C0F89EB22680E9100E05654 /* HomeSelectIMGC.m */; };
 		2C0F89EF2268150D00E05654 /* HomeSelectCollectionV.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C0F89EE2268150D00E05654 /* HomeSelectCollectionV.m */; };
 		2C0F89F12268198700E05654 /* update.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C0F89F02268198700E05654 /* update.png */; };
@@ -139,6 +140,8 @@
 		2C0576B8226971C90004C28C /* QiehuanC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QiehuanC.xib; sourceTree = "<group>"; };
 		2C0576BB2269A1800004C28C /* ShuomingC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShuomingC.h; sourceTree = "<group>"; };
 		2C0576BC2269A1800004C28C /* ShuomingC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShuomingC.m; sourceTree = "<group>"; };
+		2C0CD4A12276D4C900885F9D /* DanduAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DanduAPI.h; sourceTree = "<group>"; };
+		2C0CD4A22276D4C900885F9D /* DanduAPI.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DanduAPI.m; sourceTree = "<group>"; };
 		2C0F89EA22680E9100E05654 /* HomeSelectIMGC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeSelectIMGC.h; sourceTree = "<group>"; };
 		2C0F89EB22680E9100E05654 /* HomeSelectIMGC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeSelectIMGC.m; sourceTree = "<group>"; };
 		2C0F89ED2268150D00E05654 /* HomeSelectCollectionV.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeSelectCollectionV.h; sourceTree = "<group>"; };
@@ -782,8 +785,8 @@
 			isa = PBXGroup;
 			children = (
 				2C38A57222661E2000737E18 /* FTT_Helper.h */,
-				2C38A57322661E2000737E18 /* FTT_AttributedString.h */,
 				2C38A57422661E2000737E18 /* FTT_Helper.m */,
+				2C38A57322661E2000737E18 /* FTT_AttributedString.h */,
 				2C38A57522661E2000737E18 /* FTT_AttributedString.m */,
 			);
 			path = FTT_help;
@@ -823,6 +826,8 @@
 				2C0F8A202268525800E05654 /* HomeAPI.m */,
 				2C0F8A212268525800E05654 /* HomeVM.h */,
 				2C0F8A222268525800E05654 /* HomeVM.m */,
+				2C0CD4A12276D4C900885F9D /* DanduAPI.h */,
+				2C0CD4A22276D4C900885F9D /* DanduAPI.m */,
 			);
 			path = VM;
 			sourceTree = "<group>";
@@ -1157,6 +1162,7 @@
 				2C0F8A0322684CA800E05654 /* MyAddressTableV.m in Sources */,
 				2C38A5B92267079900737E18 /* CAAnimation+JMAnimation.m in Sources */,
 				2C38A52F2265A32700737E18 /* TT_BaseC.m in Sources */,
+				2C0CD4A32276D4C900885F9D /* DanduAPI.m in Sources */,
 				2C0F8A242268525800E05654 /* HomeVM.m in Sources */,
 				2C38A5BF226707A900737E18 /* TabBarTool.m in Sources */,
 				2CA9CF65227436350063C18E /* TT_WKwebC.m in Sources */,

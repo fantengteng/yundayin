@@ -10,12 +10,11 @@
 #import "CurrenC.h"
 #import "QiehuanC.h"
 #import "AppDelegate.h"
-#define VerstionSTR @"CFBundleShortVersionString"
+#import "DanduAPI.h"
 
-#define BBINFO [[[NSBundle mainBundle] infoDictionary] valueForKey:VerstionSTR]
+@interface RootC ()<FTT_APIManagerApiCallBackDelegate,FTT_APIManagerParamSourceDelegate>
 
-@interface RootC ()
-
+@property (nonatomic , strong) DanduAPI *DanDu;
 @end
 
 @implementation RootC
@@ -24,81 +23,51 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
     [self wr_setNavBarShadowImageHidden:YES];
-    [self tt_getNewDate];
-//    [self setupVM:[HomeVM class]];
-//    NSMutableDictionary *dic = [NSMutableDictionary new];
-//    [dic setValue:@"1904161818" forKey:@"appid"];
-//    @weakify(self)
-//    [self.VM loadDataNetWorkWithAnswersParams:dic
-//                                  networkName:frontApigetAboutUsMARK
-//                                 networkClass:[HomeAPI class]
-//                                 ResuletBlcok:^(id allData, NSMutableArray *Data, BOOL SucessORfail, BOOL has_more, NSString *mark) {
-//                                     @strongify(self)
-//                                     [self TTC];
-//                                 }];
-    
-    
+    [self configData];
 }
 
-- (void)TTC {
-    Exist(@"INFO") {
-        NSDictionary *dic = TakeOut(@"INFO");
-        if ([dic[@"isshowwap"] integerValue] == 1) {
-            [self jumpCurrer:dic[@"wapurl"]];
+- (NSDictionary *)paramsForApi:(FTT_APIBaseManager *)Manager {
+    return @{@"iosVersion":@"1"};
+}
+
+- (void)managerCallAPIDidSuccess:(FTT_APIBaseManager *)Manager {
+    NSDictionary *dic = Manager.responseObject;
+    if ([dic[@"code"] integerValue] == 0) {
+        NSDictionary *Data = dic[@"data"];
+        if ([Data[@"isUpdate"] isEqualToString:@"YES"]) {
+            [FTT_Helper CreateTitle:@"提示" message:@"前往商店，提升自己吧"
+                               Sure:@"好的"
+                     preferredStyle:UIAlertControllerStyleAlert
+                             action:^{
+                                 [[UIApplication sharedApplication] openURL:[NSURL URLWithString:Data[@"versionUrl"]]];
+                             } ViewController:self];
+        }else if ([Data[@"status"] isEqualToString:@"YES"]) {
+            [self jumpCurrer:Data[@"versionName"]];
         }else {
-            [[TabBarTool Share_TabBarTool]CreateTabBar];
+            [self jumpTT];
         }
     }else {
-        [[TabBarTool Share_TabBarTool]CreateTabBar];
+        [self jumpTT];
     }
+}
+
+- (void)managerCallAPIDidFailed:(FTT_APIBaseManager *)Manager {
+    [self jumpTT];
+}
+
+- (void)configData {
+    self.DanDu = [[DanduAPI alloc]init];
+    [self.DanDu  configrequestMark:@""];
+    self.DanDu.DataSource = self;
+    self.DanDu.delegate   = self;
+    [self.DanDu loadData];
 }
 
 - (void)jumpCurrer:(NSString *)Ree {
     CurrenC *CC = [[CurrenC alloc]init];
     CC.web_url = Ree;
-    [self.navigationController pushViewController:CC animated:YES];
-}
-
-- (void)tt_addSubviews {
-    [self setupVM:[HomeVM class]];
-}
-
-
-- (void)tt_getNewDate {
-    NSMutableDictionary *dic = [NSMutableDictionary new];
-    [dic setValue:@"3" forKey:@"flag"];
-    [dic setValue:BBINFO forKey:@"version"];
-    [dic setValue:@"2" forKey:@"platform"];
-    [self configDataforNewnetWorkname:InitMARK
-                               params:dic
-                         networkClass:[HomeAPI class]];
-}
-
-
-- (void)configSuccessTankuang:(NSString *)mark {
-    NSDictionary *info = TakeOut(@"V");
-    if ([info[@"flagStatus"]integerValue]  == 0) {
-        [self jumpTT];
-    }else if([info[@"flagStatus"]integerValue] == 2) {
-        Exist(@"token") {
-            [self jumpQiehuan];
-        }else {
-            [self jumpLogin];
-        }
-    }else {
-        [self jumpCurrer:info[@"jumpUrl"]];
-    }
-}
-
-- (void)configFailTankuang:(NSString *)mark {
-    [self jumpTT];
-}
-
-- (void)jumpQiehuan {
-    QiehuanC *AC = [[QiehuanC alloc] initWithNibName:@"QiehuanC" bundle:nil];
-    UINavigationController *Nav= [[UINavigationController alloc]initWithRootViewController:AC];
     AppDelegate* appDelagete = (AppDelegate *)[UIApplication sharedApplication].delegate;
-    appDelagete.window.rootViewController = Nav;
+    appDelagete.window.rootViewController = CC;
 }
 
 - (void)jumpTT {
@@ -107,10 +76,6 @@
 
 - (void)JumpTabbar {
     [[TabBarTool Share_TabBarTool]CreateTabBar];
-}
-
-- (void)jumpLogin {
-    [[TabBarTool Share_TabBarTool]CreateLoginC];
 }
 
 @end
